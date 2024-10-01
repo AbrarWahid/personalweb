@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrar Personal Website</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-card">
+                <img src="img/fotoabrar.jpeg" alt="foto-abrar" class="profile-pic">
+                <h1>Abrar Wahid Lubis</h1>
+                <h2>Mahasiswa Polman Bandung</h2>
+                <p>Bergairah tentang coding, teknologi, dan inovasi.</p>
+                
+                <!-- Social Media Links -->
+                <div class="social-media">
+                    <a href="https://facebook.com/abrarwahid" target="_blank" class="bi bi-facebook">
+                    </a>
+                    <a href="https://instagram.com/abbrarrr_" target="_blank" class="bi bi-instagram">
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="bi bi-linkedin"></a>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Date and Time -->
+        <section class="date-time">
+            <div class="clock-box">
+                <p id="current-date"></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const dateElement = document.getElementById('current-date');
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    
+        function updateTime() {
+            const now = new Date();
+            const date = now.toLocaleDateString('id-ID', options);
+            const time = now.toLocaleTimeString('id-ID');
+            dateElement.innerHTML = `${date} | ${time}`;
+        }
+        
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+    
+</body>
+</html>
